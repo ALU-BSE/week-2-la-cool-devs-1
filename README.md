@@ -1,9 +1,7 @@
----
 # 💻 The Engineer’s Library
 
 **The Engineer’s Library** is a Django web app that lets users explore a curated catalog of essential software engineering literature. This project demonstrates practical use of pagination, search filters, responsive UI, and structured data loading—all built using Django and Bootstrap 5.
 
----
 
 ## 🚀 Objective
 
