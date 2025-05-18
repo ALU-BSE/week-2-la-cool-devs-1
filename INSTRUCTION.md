@@ -51,7 +51,7 @@ class Book(models.Model):
   ```
 - Run:  
   ```bash
-  python manage.py makemigrations
+  python manage.py make migrations
   python manage.py migrate
   ```
 
