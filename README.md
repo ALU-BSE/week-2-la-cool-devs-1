@@ -14,8 +14,6 @@
 
 ### 2. How to Customize Items Per Page Dynamically
 
-Letting users control how many items they see on each page is a great way to improve usability. Here are a few ways you can do that:
-
 * **User Preferences**: Offer a dropdown or setting where users can choose how many results they want per page (e.g., 10, 25, 50). You can remember their choice using cookies or by saving it in their profile.
 
 * **Responsive Layout**: Adjust the number of items shown based on screen size. Show more on desktops, fewer on phones.
@@ -28,9 +26,7 @@ Letting users control how many items they see on each page is a great way to imp
 
 ### 3. What Happens if a Page is Invalid?
 
-Sometimes users might land on a page number that doesn’t exist—for example, they click on an old link or manually type a wrong page in the URL. Your app should handle this smoothly.
-
-Here’s how:
+Here are some of the ways to handle invalid pages:
 
 * **Redirect to the Last Page**: If they go past the last available page, just send them to the final valid one.
 
