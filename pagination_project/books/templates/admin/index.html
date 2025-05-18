@@ -1,0 +1,12 @@
+{% extends "admin/index.html" %}
+{% block content %}
+  {{ block.super }}
+  <div class="module">
+    <h2>📊 Book Statistics</h2>
+    <ul>
+      <li>Total Books: {{ book_count }}</li>
+      <li>Unique Authors: {{ unique_authors }}</li>
+      <li>Earliest Year: {{ earliest }}</li>
+    </ul>
+  </div>
+{% endblock %}

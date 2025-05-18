@@ -6,15 +6,24 @@
   <title>💻 The Engineer’s Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{% static 'books/styles.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'books/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'books/dark-mode.css' %}">
 </head>
 
 <body>
-  <div class="container py-5">
+  <div class="container py-4">
+
+    <!-- Dark Mode Toggle (top right corner) -->
+    <div class="d-flex justify-content-end mb-2">
+      <button id="toggle-dark-mode" class="btn btn-sm" aria-label="Toggle Dark Mode" title="Toggle Theme">
+        <span id="dark-icon">🌙</span>
+      </button>
+    </div>
+
     <!-- Header -->
-    <div class="mb-5 text-center">
+    <div class="mb-4 text-center">
       <h1 class="display-5 fw-bold">💻 The Engineer’s Library</h1>
-      <p class="text-muted fs-5">
+      <p class="lead">
         📘 A curated collection of must-read software engineering books from timeless principles to modern practices.
         Browse by <strong>author</strong>, <strong>title</strong>, or <strong>year</strong>.
       </p>
@@ -42,8 +51,8 @@
             value="{{ query }}"
             class="form-control"
             placeholder="Start typing..."
-              pattern="[A-Za-z\s\.]+"
-            title="Only letters and spaces allowed"
+            pattern="[A-Za-z\s\.]+"
+            title="Only letters, periods, and spaces allowed"
             required
           >
           <datalist id="options">
@@ -121,8 +130,10 @@
         {% endif %}
       </ul>
     </nav>
+
   </div>
-  <!-- JS: Input validation -->
- <script src="{% static 'books/script.js' %}"></script>
+
+  <!-- Scripts -->
+  <script src="{% static 'books/script.js' %}"></script>
 </body>
 </html>
