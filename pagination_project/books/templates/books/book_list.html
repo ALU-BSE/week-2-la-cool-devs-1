@@ -42,7 +42,7 @@
             value="{{ query }}"
             class="form-control"
             placeholder="Start typing..."
-            pattern="[A-Za-z\s]+"
+              pattern="[A-Za-z\s\.]+"
             title="Only letters and spaces allowed"
             required
           >
@@ -122,19 +122,7 @@
       </ul>
     </nav>
   </div>
-
   <!-- JS: Input validation -->
-  <script>
-    document.getElementById('filter-form')?.addEventListener('submit', function(e) {
-      const filterBy = document.getElementById('filter_by').value;
-      const input = document.getElementById('q');
-      const regex = /^[A-Za-z\s]+$/;
-      if ((filterBy === 'author' || filterBy === 'title') && input && input.value && !regex.test(input.value)) {
-        alert('Only alphabetic characters and spaces are allowed.');
-        input.focus();
-        e.preventDefault();
-      }
-    });
-  </script>
+ <script src="{% static 'books/scripts.js' %}"></script>
 </body>
 </html>
