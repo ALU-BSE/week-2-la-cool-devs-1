@@ -220,7 +220,7 @@ This design choice keeps our app beginner-friendly and robust for edge cases.
 
 * templates/books/book_list.html – Main user-facing template
 
-* static/books/styles.css – Custom CSS for Bootstrap-enhanced UI
+* static/books/script.js – JavaScript for form validation and interaction
 
 
 ## 📸 Interface Preview
