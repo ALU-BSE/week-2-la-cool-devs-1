@@ -1,6 +1,7 @@
 ## Django Pagination Activity
 
 Pagination is the process of dividing a large set of data into smaller, more manageable parts—usually called pages. Instead of showing all the data at once, pagination loads just a portion at a time, helping both the system and the user handle information more efficiently.
+
 ### 1.Why is Pagination Important for Large Datasets?
 
 **Better Performance**: Trying to load thousands of records all at once can slow down your app or even crash it. Pagination helps by loading only what’s needed, keeping things smooth and responsive.
