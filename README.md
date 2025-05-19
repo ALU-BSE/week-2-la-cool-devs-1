@@ -163,7 +163,7 @@ This design choice keeps our app beginner-friendly and robust for edge cases.
 
 * Inputs validated to accept only alphabetic characters where applicable.
   ```javascript
-  const regex = /^[A-Za-z\s]+$/;
+   const regex = /^[A-Za-z\s.]+$/;
   if (!regex.test(input.value)) alert('Only alphabetic characters allowed.');
   ```
 
@@ -295,7 +295,7 @@ Dark Mode Preview
 | ---------------------- | ------------------------------------------------------------ |
 | **Login URL**          | [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) |
 | **Username**           | `admin`                                                      |
-| **Password**           | `admin` *(or whatever you set)*                              |
+| **Password**           | `admin`                              |
 | **Admin Capabilities** | Add/edit/delete books, filter/search, view dashboard         |
 
 
@@ -375,7 +375,7 @@ Here’s how **The Engineer’s Library** looks in the browser:
 
 ![Light mode Preview](https://github.com/user-attachments/assets/aceaf3f7-f593-4ba0-9ea4-793cdce520f9)
 
-DaRD Mode Preview
+Dark Mode Preview
 
 ![Dark mode Preview](https://github.com/user-attachments/assets/75c7a71b-fdad-4433-ae81-9a49390caf49)
 
