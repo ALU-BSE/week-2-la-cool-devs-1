@@ -1,15 +1,24 @@
-from django.contrib.admin import AdminSite
-from django.utils.translation import gettext_lazy as _
 from django.contrib import admin
 from .models import Book
-from django.db.models import Count
+
+admin.site.site_header = "📘 The Engineer’s Library Admin"
+admin.site.site_title = "Engineer’s Portal"
+admin.site.index_title = "Book Dashboard"
+
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'published_year')
-    list_filter = ('published_year',)
+
+    # Enable filters for multiple fields
+    list_filter = ('author', 'title', 'published_year')
+
+    # Enable search on specific fields
     search_fields = ('title', 'author')
 
-admin.site.site_header = "📘 Engineer’s Library Admin"
-admin.site.site_title = "Engineer’s Portal"
-admin.site.index_title = "Book Dashboard"
+    # Pagination - show 10 by default
+    list_per_page = 10
+    list_max_show_all = 200  # Optional: allow all items to be shown
+
+    # Optional: ordering
+    ordering = ('title',)

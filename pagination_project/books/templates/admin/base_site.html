@@ -1,16 +1,22 @@
 {% extends "admin/base.html" %}
 {% load static %}
 
+{% block title %}The Engineer’s Library{% endblock %}
+
+{% block branding %}
+  <h1 id="site-name">
+    <a href="{% url 'admin:index' %}">📘 The Engineer’s Library</a>
+  </h1>
+{% endblock %}
+
 {% block extrahead %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'admin/styles.css' %}">
   <link id="dark-style" rel="stylesheet" href="{% static 'admin/dark-mode.css' %}" disabled>
   <script>
-    // Simple toggle on localStorage basis
     window.addEventListener('load', () => {
       const dark = localStorage.getItem('adminDark') === 'true';
-      const darkStyle = document.getElementById('dark-style');
-      darkStyle.disabled = !dark;
+      document.getElementById('dark-style').disabled = !dark;
     });
   </script>
 {% endblock %}
