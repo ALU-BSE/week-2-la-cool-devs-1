@@ -1,0 +1,17 @@
+body {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+.module caption,
+h1,
+h2,
+#header,
+#content h1 {
+  color: #ffffff !important;
+}
+#header {
+  background-color: #212121 !important;
+}
+a {
+  color: #90caf9 !important;
+}
